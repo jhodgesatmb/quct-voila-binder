@@ -7,7 +7,7 @@ This tool is provided to convert from one unit type in the QUDT vocabulary to an
 <h2>Usage</h2>
 
 <ol>
-<li>Select a desired Quantity Kind from the list. The list is populated by executing a SPARQL query on the QUDT triple store, satisfying: ?quantity a qudt:QuantityKind. Once selected, this will narrow the types of starting and target units available to those that are applicable to the quantity kind. That is, they satisfy the following property in the QUDT triple store: quantity qudt:applicableUnit ?unit.
+<li>Select a desired Quantity Kind from the list. The list is populated by executing a SPARQL query on the QUDT triple store, satisfying: ?quantity a qudt:QuantityKind. Once selected, this will narrow the types of starting and target units available to those that are applicable to the quantity kind. That is, they satisfy the following property in the QUDT triple store: <selected_quantity_kind> qudt:applicableUnit ?unit.
 
 <li>The start and target unit dropdowns are identical except that the target unit dropdown is not allowed to include the start unit value. Again, in SPARQL we apply a filter: FILTER (?tgtUnit != startUnit).
 
