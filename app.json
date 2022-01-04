@@ -1,0 +1,7 @@
+{
+  "name": "quct.ipynb",
+  "description": "A unit conversion tool for QUDT vocabularies",
+  "repository": "https://git.heroku.com/warm-bayou-98711.git",
+  "logo": "images/qudt_logo-300x100.png",
+  "keywords": ["qudt", "unit conversion"]
+}
