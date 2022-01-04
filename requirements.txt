@@ -58,7 +58,6 @@ pyzmq==22.3.0
 requests==2.26.0
 Send2Trash==1.8.0
 six==1.16.0
-SMA-SunnyBoy @ file:///Users/jackhodges/Projects/SMA-SunnyBoy
 sniffio==1.2.0
 terminado==0.12.1
 testpath==0.5.0
