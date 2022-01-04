@@ -1,0 +1,19 @@
+<h1>How to use the QUDT Unit Conversion Tool</h1>
+
+<hr>
+
+This tool is provided to convert from one unit type in the QUDT vocabulary to another. like other online tools, you provide a value for the starting unit type and the tool provides the converted value in the target unit.
+
+<h2>Usage</h2>
+
+<ol>
+<li>Select a desired Quantity Kind from the list. The list is populated by executing a SPARQL query on the QUDT triple store, satisfying: ?quantity a qudt:QuantityKind. Once selected, this will narrow the types of starting and target units available to those that are applicable to the quantity kind. That is, they satisfy the following property in the QUDT triple store: quantity qudt:applicableUnit ?unit.
+
+<li>The start and target unit dropdowns are identical except that the target unit dropdown is not allowed to include the start unit value. Again, in SPARQL we apply a filter: FILTER (?tgtUnit != startUnit).
+
+<li>At any time, the start and target units are used to query for their associated conversion multipliers: start_unit qudt:conversionMultiplier ?stunit_cm. Initially, when no unit has been selected, the default units will be the first ones in the list.
+
+<li>Finally, the conversion is calculated as: converted_value = starting_value * starting_unit_conversion_multiplier / target_unit_conversion_multiplier.
+</ol>
+
+Please tell us at info@qudt.org if you find any issues with this tool.
