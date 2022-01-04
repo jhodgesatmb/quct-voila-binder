@@ -1,2 +1,6 @@
-# quct-voila-binder
-A binder version of the QUDT unit conversion Voila app
+# quct-voila
+ Voila deployment of QUDT Unit Conversion Tool
+
+<a href="https://heroku.com/deploy">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
