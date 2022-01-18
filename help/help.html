@@ -1,19 +1,33 @@
-<h1>How to use the QUDT Unit Conversion Tool</h1>
-
-<hr>
-
-This tool is provided to convert from one unit type in the QUDT vocabulary to another. like other online tools, you provide a value for the starting unit type and the tool provides the converted value in the target unit.
-
-<h2>Usage</h2>
-
-<ol>
-<li>Select a desired Quantity Kind from the list. The list is populated by executing a SPARQL query on the QUDT triple store, satisfying: ?quantity a qudt:QuantityKind. Once selected, this will narrow the types of starting and target units available to those that are applicable to the quantity kind. That is, they satisfy the following property in the QUDT triple store: <selected_quantity_kind> qudt:applicableUnit ?unit.
-
-<li>The start and target unit dropdowns are identical except that the target unit dropdown is not allowed to include the start unit value. Again, in SPARQL we apply a filter: FILTER (?tgtUnit != startUnit).
-
-<li>At any time, the start and target units are used to query for their associated conversion multipliers: start_unit qudt:conversionMultiplier ?stunit_cm. Initially, when no unit has been selected, the default units will be the first ones in the list.
-
-<li>Finally, the conversion is calculated as: converted_value = starting_value * starting_unit_conversion_multiplier / target_unit_conversion_multiplier.
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {-webkit-text-stroke: 0px #000000}
+    ol.ol1 {list-style-type: decimal}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>How to use the QUDT Unit Conversion Tool</b></span></h1>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">This tool is provided to convert from one unit type in the QUDT vocabulary to another. Like other online tools, you provide a value for the starting unit type and the tool provides the converted value in the target unit. Unlike other tools, this one has access to the entire QUDT quantity kind and unit vocabularies.</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Usage</b></span></h2>
+<ol class="ol1">
+  <li class="li3"><span class="s2">You can start typing the name of a desired Quantity Kind and those matching what you the will show up in the Quantity Kind dropdown list. Or you can s</span><span class="s1">elect a desired Quantity Kind from the list directly. The list is populated by executing a SPARQL query on the QUDT triple store, satisfying: ?quantitykind a qudt:QuantityKind (plus a filter against the text you have typed). Once a quantity kind is selected, this will narrow the types of starting and target units available to those that are applicable to the quantity kind. That is, they satisfy the following property in the QUDT triple store: qudt:applicableUnit ?unit.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">The starting and target unit dropdowns are identical except that the target unit dropdown is not allowed to include the start unit value. Again, in SPARQL we apply a filter: FILTER (?tgtUnit != startUnit).<span class="Apple-converted-space"> </span></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">At any time, the start and target units are used to query for their associated conversion multipliers: start_unit qudt:conversionMultiplier ?stunit_cm. Initially, when no unit has been selected, the default units will be the first ones in the list.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li3"><span class="s2"></span><span class="s1">Finally, the conversion is calculated as: converted_value = starting_value * starting_unit_conversion_multiplier / target_unit_conversion_multiplier.<span class="Apple-converted-space"> </span></span></li>
 </ol>
-
-Please tell us at info@qudt.org if you find any issues with this tool.
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">Please tell us at info@qudt.org if you find any issues with this tool or have suggestions going forward. Also look forward to other useful applications.<span class="Apple-converted-space"> </span></span></p>
+</body>
+</html>
